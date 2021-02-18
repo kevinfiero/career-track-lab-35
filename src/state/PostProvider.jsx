@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import reducer, { initialState } from '../reducers/PostReducer';
+import reducer, { initialState } from '../reducers/postReducer';
 
 const PostContext = createContext(null);
 

@@ -1,5 +1,5 @@
-import { createPost } from "../actions/postActions";
-import reducer from "./PostReducer";
+import { createPost } from '../actions/postActions';
+import reducer from './postReducer';
 
 describe('post reducer', () => {
   it('add a post with the CREATE_POST action', () => {
