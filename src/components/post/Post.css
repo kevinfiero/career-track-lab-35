@@ -1,0 +1,33 @@
+.postContainer{
+  border: .25rem solid black;
+  margin: 1rem;
+  background-color: skyblue;
+}
+
+.postTitle {
+  margin: 1rem;
+}
+
+.postContents{
+  margin: 1rem;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button{
+  margin: 1rem 1rem 0 0;
+  height: 2rem;
+}
+
+li{
+  list-style: none;
+}
