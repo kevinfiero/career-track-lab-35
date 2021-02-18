@@ -4,3 +4,10 @@ export const createPost = (post) => ({
   type: CREATE_POST,
   payload: post
 });
+
+export const DELETE_POST = 'DELETE_POST';
+
+export const deletePost = (post) => ({
+  type: DELETE_POST,
+  payload: post
+});
