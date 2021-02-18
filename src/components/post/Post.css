@@ -1,6 +1,7 @@
 .postContainer{
   border: .25rem solid black;
   margin: 1rem;
+  background-color: skyblue;
 }
 
 .postTitle {
