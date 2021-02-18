@@ -1,0 +1,17 @@
+.contents{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+textarea{
+  height: 10rem;
+  width: 20rem;
+  margin: 1rem 0 1rem 0;
+}
+
+input{
+  width: 20rem;
+}
