@@ -1,15 +1,20 @@
 import React from 'react';
-import PostForm from '../../forms/PostForm';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../store';
-import PostList from '../post/PostList';
 import './App.css';
+import PostHome from '../../actions/pages/PostHome';
+import CommentSection from '../../actions/pages/CommentSection';
 
 export default function App() {
   return (
     <Provider store={store}>
-      <PostForm />
-      <PostList />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={PostHome} />
+          <Route exact path="/:id" component={CommentSection} />
+        </Switch>
+      </Router>
     </Provider>
   );
 }
