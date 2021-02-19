@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from './Post';
-import styles from './Post.css';
 import { useSelector } from 'react-redux';
 import { getPosts } from '../../selectors/postSelectors';
 
