@@ -6,7 +6,8 @@ describe('post selectors', () => {
       posts: {
         posts: [{ 
           title: 'Best Board Game of 2020', 
-          contents: 'The best board game in 2020 was the best game that existed.' }]
+          contents: 
+            'The best board game in 2020 was the best game that existed.' }]
       }
     };
   
