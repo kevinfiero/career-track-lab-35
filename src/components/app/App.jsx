@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../store';
 import './App.css';
-import PostHome from '../../actions/pages/PostHome';
-import CommentSection from '../../actions/pages/CommentSection';
+import PostHome from '../../pages/PostHome';
+import CommentSection from '../../pages/CommentSection';
 
 export default function App() {
   return (
