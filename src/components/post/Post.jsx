@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Post.css';
 import { deletePost } from '../../actions/postActions';
-import { useDispatch } from '../../state/PostProvider';
+import { useDispatch } from 'react-redux';
 
 function Post({ title, contents }) {
 
