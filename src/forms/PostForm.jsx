@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './PostForm.css';
 import { createPost } from '../actions/postActions';
 import { useDispatch } from 'react-redux';
+import { v4 as randomId } from 'uuid';
 
 const PostForm = () => {
 
@@ -9,11 +10,11 @@ const PostForm = () => {
 
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
+  const [postId, setPostId] = useState('');
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    dispatch(createPost({ title, contents }));
+    dispatch(createPost({ title, contents, postId }));
   };
 
   return (
@@ -28,7 +29,7 @@ const PostForm = () => {
         onChange={({ target }) => setContents(target.value)} 
         placeholder="Post Contents" 
       />
-      <button>Submit Post</button>
+      <button onClick={() => setPostId(randomId())}>Submit Post</button>
     </form>
   );
 };

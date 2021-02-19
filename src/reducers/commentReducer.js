@@ -15,7 +15,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         comments: state.comments.filter(comment =>
-          comment.comment !== action.payload.comment
+          comment.commentId !== action.payload
         )
       };
     default:

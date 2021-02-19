@@ -15,8 +15,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         posts: state.posts.filter(post =>
-          post.title !== action.payload.title ||
-          post.contents !== action.payload.contents
+          post.postId !== action.payload
         )
       };
     default:

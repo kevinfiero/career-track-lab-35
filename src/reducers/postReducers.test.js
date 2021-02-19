@@ -9,7 +9,8 @@ describe('post reducer', () => {
 
     const action = createPost({ 
       title: 'Best Board Game of 2020', 
-      contents: 'The best board game in 2020 was the best game that existed.' 
+      contents: 'The best board game in 2020 was the best game that existed.',
+      postId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f' 
     });
 
     const newState = reducer(state, action);
@@ -17,7 +18,8 @@ describe('post reducer', () => {
     expect(newState).toEqual({
       posts: [{ 
         title: 'Best Board Game of 2020', 
-        contents: 'The best board game in 2020 was the best game that existed.' 
+        contents: 'The best board game in 2020 was the best game that existed.',
+        postId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f'  
       }]
     });
   });
@@ -29,15 +31,13 @@ describe('post reducer', () => {
 
     const actionCreate = createPost({ 
       title: 'Best Board Game of 2020', 
-      contents: 'The best board game in 2020 was the best game that existed.' 
+      contents: 'The best board game in 2020 was the best game that existed.',
+      postId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f'  
     });
 
     reducer(state, actionCreate);
 
-    const actionDelete = deletePost({ 
-      title: 'Best Board Game of 2020', 
-      contents: 'The best board game in 2020 was the best game that existed.' 
-    });
+    const actionDelete = deletePost('930ae81d-b860-4fa9-a6dd-37d5a82a6c0f');
 
     const newState = reducer(state, actionDelete);
 

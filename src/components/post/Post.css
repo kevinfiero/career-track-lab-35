@@ -12,6 +12,10 @@
   margin: 1rem;
 }
 
+.postLink{
+  text-decoration: none;
+}
+
 .column{
   display: flex;
   flex-direction: column;

@@ -4,12 +4,12 @@ import styles from './Comment.css';
 import { deleteComment } from '../actions/commentActions';
 import { useDispatch } from 'react-redux';
 
-function Comment({ comment }) {
+function Comment({ comment, commentId }) {
 
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(deleteComment({ comment }));
+    dispatch(deleteComment(commentId));
   };
 
   return (
@@ -25,7 +25,8 @@ function Comment({ comment }) {
 }
 
 Comment.propTypes = {
-  comment: PropTypes.string.isRequired
+  comment: PropTypes.string.isRequired,
+  commentId: PropTypes.string.isRequired
 
 };
 
