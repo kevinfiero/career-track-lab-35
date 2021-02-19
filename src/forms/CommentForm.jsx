@@ -11,7 +11,6 @@ const CommentForm = () => {
 
   const [comment, setComments] = useState('');
   const [commentId, setCommentId] = useState('');
-
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -20,6 +19,7 @@ const CommentForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.contents}>
+      
       <textarea
         onChange={({ target }) => setComments(target.value)} 
         placeholder="Type Your Comment Here..." 
