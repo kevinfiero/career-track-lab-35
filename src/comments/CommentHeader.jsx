@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getPosts } from '../selectors/postSelectors';
+import { useParams } from 'react-router-dom';
 import styles from './CommentHeader.css';
 
-export default function CommentHeader(id) {
+export default function CommentHeader() {
 
   const post = useSelector(getPosts).filter(post =>
-    post !== id
+    post.postId === useParams().id
   )[0];
 
   return (
