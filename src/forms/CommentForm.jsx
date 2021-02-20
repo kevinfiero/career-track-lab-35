@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './CommentForm.css';
+import { useParams } from 'react-router-dom';
 import { createComment } from '../actions/commentActions';
 import { useDispatch } from 'react-redux';
 import { v4 as randomId } from 'uuid';
@@ -11,10 +12,14 @@ const CommentForm = () => {
 
   const [comment, setComments] = useState('');
   const [commentId, setCommentId] = useState('');
+  const [postId, setPostId] = useState('');
+
+  const id = useParams().id;
+
   const handleSubmit = event => {
     event.preventDefault();
 
-    dispatch(createComment({ comment, commentId }));
+    dispatch(createComment({ comment, commentId, postId }));
   };
 
   return (
@@ -24,7 +29,10 @@ const CommentForm = () => {
         onChange={({ target }) => setComments(target.value)} 
         placeholder="Type Your Comment Here..." 
       />
-      <button onClick={() => setCommentId(randomId())}>Submit Comment</button>
+      <button onClick=
+        {() => {setCommentId(randomId()); 
+          setPostId(id);}}> Submit Comment
+      </button>
     </form>
   );
 };

@@ -3,12 +3,12 @@ import CommentHeader from '../comments/CommentHeader';
 import CommentList from '../comments/CommentList';
 import CommentForm from '../forms/CommentForm';
 
-export default function CommentSection(props) {
+export default function CommentSection() {
 
   return (
     <>
-      <CommentHeader id={props.match.params.id}/>
-      <CommentForm />
+      <CommentHeader/>
+      <CommentForm/>
       <CommentList />
     </>
   );
