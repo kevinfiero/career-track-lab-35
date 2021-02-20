@@ -14,6 +14,8 @@ const CommentForm = () => {
   const [commentId, setCommentId] = useState('');
   const [postId, setPostId] = useState('');
 
+  const id = useParams().id;
+
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -29,7 +31,7 @@ const CommentForm = () => {
       />
       <button onClick=
         {() => {setCommentId(randomId()); 
-          setPostId(useParams().id);}}> Submit Comment
+          setPostId(id);}}> Submit Comment
       </button>
     </form>
   );
