@@ -4,6 +4,7 @@ import styles from './Post.css';
 import { deletePost } from '../../actions/postActions';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { deletePostComments } from '../../actions/commentActions';
 
 function Post({ title, contents, postId }) {
 
@@ -11,6 +12,7 @@ function Post({ title, contents, postId }) {
 
   const handleClick = () => {
     dispatch(deletePost(postId));
+    dispatch(deletePostComments(postId));
   };
 
   return (

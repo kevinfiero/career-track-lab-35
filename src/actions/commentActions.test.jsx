@@ -9,14 +9,16 @@ describe('comment actions', () => {
   it('creates a create comment action', () => {
     const action = createComment({ 
       comment: 'The best board game in 2020 was the best game that existed.',
-      commentId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f' 
+      commentId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f',
+      postId: '930ae81d-b860-5789-a6dd-37d5a82a6c0f'
     });
 
     expect(action).toEqual({
       type: CREATE_COMMENT,
       payload: { 
         comment: 'The best board game in 2020 was the best game that existed.',
-        commentId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f'  
+        commentId: '930ae81d-b860-4fa9-a6dd-37d5a82a6c0f',
+        postId: '930ae81d-b860-5789-a6dd-37d5a82a6c0f'
       }
     });
   });
